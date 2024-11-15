@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/tic-tac-toe.png"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Tic Tac Toe</title>
+    </head>
+    <body class="bg-blue-100 font-qs h-screen flex justify-center items-center">
+        <div
+            class="bg-indigo-50 rounded-md font-semibold w-[72vw] h-[36vw] grid grid-cols-12 overflow-hidden"
+        >
+            <div
+                class="bg-indigo-400 col-span-7 flex justify-center items-center"
+            >
+                <div
+                    class="w-[32vw] h-[32vw] rounded-md grid grid-cols-3 grid-rows-3 overflow-hidden gap-1"
+                >
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+            </div>
+            <div
+                class="bg-indigo-300 col-span-5 grid grid-rows-5 font-semibold"
+            >
+                <div class="p-1 row-span-3 flex flex-col">
+                    <div
+                        class="text-[2vw] text-neutral-800 text-center underline"
+                    >
+                        Score
+                    </div>
+                    <div
+                        class="grid grid-rows-2 rounded-md overflow-hidden my-auto text-[1.6vw] mx-2 bg-stone-800 gap-1 border-4 border-stone-800"
+                    >
+                        <div class="grid grid-cols-2 gap-x-1">
+                            <div class="text-center py-[0.4vw] bg-indigo-300">
+                                Player 1
+                            </div>
+                            <div class="text-center py-[0.4vw] bg-indigo-300">
+                                Player 2
+                            </div>
+                            <div
+                                id="score1"
+                                class="text-center py-[0.4vw] bg-indigo-300"
+                            >
+                                0
+                            </div>
+                            <div
+                                id="score2"
+                                class="text-center py-[0.4vw] bg-indigo-300"
+                            >
+                                0
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-center py-[0.4vw] bg-indigo-300">
+                                Draw
+                            </div>
+                            <div
+                                id="draw"
+                                class="text-center py-[0.4vw] bg-indigo-300"
+                            >
+                                0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-span-2 p-1 flex flex-col">
+                    <div class="h-fit text-[1.6vw] text-center">
+                        Turn: <span id="player"></span>
+                    </div>
+                    <div
+                        id="winner"
+                        class="h-full text-[2vw] flex justify-center items-center"
+                    ></div>
+                    <div
+                        class="flex flex-col gap-1 text-[1.6vw] font-semibold text-violet-950 p-1"
+                    >
+                        <button
+                            id="reset-game"
+                            class="border-2 border-violet-600 hover:bg-violet-600 hover:text-indigo-200 active:bg-opacity-80 transition duration-150 rounded py-[0.2vw]"
+                        >
+                            Reset Match
+                        </button>
+                        <button
+                            id="reset-score"
+                            class="border-2 border-violet-600 hover:bg-violet-600 hover:text-indigo-200 active:bg-opacity-80 transition duration-150 rounded py-[0.2vw]"
+                        >
+                            Reset Score
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
